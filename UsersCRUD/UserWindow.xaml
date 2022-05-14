@@ -1,0 +1,133 @@
+﻿<Window x:Class="UsersCRUD.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="UserWindow"
+        Background="{DynamicResource MaterialDesignDarkBackground}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        WindowState="Maximized"
+        Height="1050" Width="1680"
+        xmlns:viewModel="clr-namespace:UsersCRUD.ViewModel.Main"
+        WindowStyle="None">
+
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <!-- Added Material design configuration -->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.RadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBlock.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.DataGrid.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <!-- Added Material design configuration -->
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="250"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition/>
+            <RowDefinition Height="75"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="User options"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontSize="22"
+                       Style="{StaticResource MaterialDesignTextBlock}"
+                       Margin="20,0,0,0"/>
+
+        <StackPanel Grid.Row="1">
+
+            <RadioButton Content="User preview"
+                             Height="100"
+                             Width="200"
+                             FontSize="14"
+                             Foreground="White"
+                             Style="{StaticResource MaterialDesignChoiceChipAccentOutlineRadioButton}"
+                             IsChecked="True"
+                             Command="{Binding UserPreviewViewCommand}"/>
+
+            <RadioButton Content="Create user"
+                             Height="100"
+                             Width="200"
+                             FontSize="14"
+                             Foreground="White"
+                             Style="{StaticResource MaterialDesignChoiceChipAccentOutlineRadioButton}"
+                             IsChecked="True"
+                             Command="{Binding CreateUserViewCommand}"/>
+
+            <RadioButton Content="Update user"
+                             Height="100"
+                             Width="200"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MaterialDesignChoiceChipAccentOutlineRadioButton}"
+                             Command="{Binding UpdateUserViewCommand}"/>
+
+            <RadioButton Content="Delete user"
+                             Height="100"
+                             Width="200"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MaterialDesignChoiceChipAccentOutlineRadioButton}"
+                             Command="{Binding DeleteUserViewCommand}"/>
+
+        </StackPanel>
+
+        <StackPanel
+                HorizontalAlignment="Center"
+                Orientation="Horizontal"
+                Grid.Row="2"
+                Grid.Column="1">
+
+            <RadioButton Content="About"
+                             Height="50"
+                             Width="220"
+                             Foreground="White"
+                             FontSize="14"
+                             IsChecked="True"
+                             Style="{StaticResource MaterialDesignChoiceChipAccentOutlineRadioButton}"
+                             Command="{Binding AboutViewCommand}"/>
+
+        </StackPanel>
+
+        <StackPanel
+                
+                Grid.Row="1"
+                Grid.Column="2">
+
+            <RadioButton Content="Return"
+                             HorizontalAlignment="Right"
+                             x:Name="Logout"
+                             Height="100"
+                             Width="150"
+                             Foreground="White"
+                             FontSize="14"
+                             Click="Logout_Click"
+                             Style="{StaticResource MaterialDesignChoiceChipAccentOutlineRadioButton}"/>
+            
+        </StackPanel>
+
+        <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+    </Grid>
+
+</Window>

@@ -1,0 +1,40 @@
+UsersCRUD - programming Kristij4n
+
+****************************************************
+20220430_1455_UsersCRUD
+
+created CRUD application for User
+
+****************************************************
+20220430_0203_UsersCRUD
+
+extended navigation for app
+
+****************************************************
+20220430_0522_UsersCRUD
+
+TEST OK with CRUD and navigate
+to do:
+filtering table,
+set Oib unique id
+
+****************************************************
+20220501_1025_UsersCRUD
+
+TEST OK
+implemented in sql Oib unique id
+connected with WPF
+set exception if wrong oib entered
+
+****************************************************
+20220502_0645_UsersCRUD
+
+added filter in grid for Name and Surname
+
+****************************************************
+20220502_2111_UsersCRUD
+
+added filter in grid for Oib
+
+****************************************************
+
