@@ -1,0 +1,83 @@
+﻿<Application x:Class="UsersCRUD.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:UsersCRUD"
+             Startup="Application_Startup"
+             xmlns:viewU="clr-namespace:UsersCRUD.View"
+             xmlns:viewA="clr-namespace:UsersCRUD.View.About"
+             xmlns:viewUP="clr-namespace:UsersCRUD.View.User"
+             xmlns:viewCU="clr-namespace:UsersCRUD.View.User"
+             xmlns:viewUPU="clr-namespace:UsersCRUD.View.User"
+             xmlns:viewDU="clr-namespace:UsersCRUD.View.User"
+             xmlns:viewModelU="clr-namespace:UsersCRUD.ViewModel"
+             xmlns:viewModelA="clr-namespace:UsersCRUD.ViewModel.About"
+             xmlns:viewModelUP="clr-namespace:UsersCRUD.ViewModel.User"
+             xmlns:viewModelCU="clr-namespace:UsersCRUD.ViewModel.User"
+             xmlns:viewModelUPU="clr-namespace:UsersCRUD.ViewModel.User"
+             xmlns:viewModelDU="clr-namespace:UsersCRUD.ViewModel.User"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <!-- Added Material design configuration -->
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <materialDesign:CustomColorTheme BaseTheme="Light" PrimaryColor="DimGray" SecondaryColor="Silver" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Added Material design configuration -->
+
+        
+        <!-- About VM,V -->
+
+        <DataTemplate DataType="{x:Type viewModelA:AboutViewModel}">
+            <viewA:AboutView/>
+        </DataTemplate>
+
+        <!-- About VM,V -->
+
+        <!-- User VM,V -->
+
+        <DataTemplate DataType="{x:Type viewModelU:UserViewModel}">
+            <viewU:UserView/>
+        </DataTemplate>
+
+        <!-- User VM,V -->
+
+        <!-- UserPreview VM,V -->
+
+        <DataTemplate DataType="{x:Type viewModelUP:UserPreviewViewModel}">
+            <viewUP:UserPreviewView/>
+        </DataTemplate>
+
+        <!-- UserPreview VM,V -->
+
+        <!-- User create VM,V -->
+
+        <DataTemplate DataType="{x:Type viewModelCU:CreateUserViewModel}">
+            <viewCU:CreateUserView/>
+        </DataTemplate>
+
+        <!-- User create VM,V -->
+
+        <!-- User update VM,V -->
+
+        <DataTemplate DataType="{x:Type viewModelUPU:UpdateUserViewModel}">
+            <viewUPU:UpdateUserView/>
+        </DataTemplate>
+
+        <!-- User update VM,V -->
+
+        <!-- User delete VM,V -->
+
+        <DataTemplate DataType="{x:Type viewModelDU:DeleteUserViewModel}">
+            <viewDU:DeleteUserView/>
+        </DataTemplate>
+
+        <!-- User delete VM,V -->
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
