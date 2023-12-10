@@ -4,6 +4,7 @@ using System.ComponentModel;
 namespace UsersCRUD.Model
 
 	//test2 for git xx
+	//test20231213_2234
 {
 	public class UserDTO : INotifyPropertyChanged
 	{
