@@ -2,6 +2,8 @@
 using System.ComponentModel;
 
 namespace UsersCRUD.Model
+
+	//test2 for git xx
 {
 	public class UserDTO : INotifyPropertyChanged
 	{
