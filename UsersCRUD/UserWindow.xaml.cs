@@ -14,7 +14,11 @@ using System.Windows.Shapes;
 
 namespace UsersCRUD
 {
-    ///test text20240818
+<<<<<<<<< Temporary merge branch 1
+    ///test text2
+=========
+    ///test text2-2024
+>>>>>>>>> Temporary merge branch 2
     /// <summary>
     /// Interaction logic for UserWindow.xaml
     /// </summary>
