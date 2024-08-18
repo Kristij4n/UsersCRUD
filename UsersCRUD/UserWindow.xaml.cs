@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 
 namespace UsersCRUD
 {
-    ///test text2-2024
+    ///test text
     /// <summary>
     /// Interaction logic for UserWindow.xaml
     /// </summary>
